@@ -4,37 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PASS 4J</title>
     <link rel="stylesheet" href="Global.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Sora&display=swap"rel="stylesheet"/>
 </head>
 <body>
 <body class="billetterie">
-    <nav class="navbar navbar sticky-nav">
+<nav class="navbar navbar sticky-nav">
         <a href="index.html"><img src="Image/logo_anim_04794562be.gif" alt="" class="logoheader"></a>
         <div class="nav-links ">
             <div class="containernav">
                 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                 <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_euaveaxu.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop  autoplay class="astronaute"></lottie-player>
                 <ul>
-                  <li><a href="index.html">Acceuil</a></li>
+                  <li><a href="index.html">Accueil</a></li>
                     <li><a href="Line-up.php">Line-Up</a></li>
-                    <li><a href="#">TICKETS</a></li>
+                    <li><a href="Reservation.html">TICKETS</a></li>
                     <li><a href="FAQ.html">F.A.Q</a></li>
                     <li><a href="Actu.html">ACTU</a></li>
                 </ul>
             </div>
             
             <div class="iconsnav">
-                <a href="https://www.facebook.com/lesardentes"><img class="social-logo"src="Image/icons8-facebook-entouré-150.png" alt=""></a>
-                <a href="https://twitter.com/lesardentes"><img class="social-logo" src="Image/Twitter-entouré.png" alt=""></a>
-                <a href="https://www.instagram.com/lesardentes/"><img class="social-logo"src="Image/instagram_black_logo_icon_147122.png" alt=""></a>
-                <a href="https://www.youtube.com/LesArdentesFestival"><img class="social-logo"src="Image/youtube_black_logo_icon_147044.png" alt=""></a>
-                <a href="https://www.tiktok.com/@lesardentes"><img class="social-logo" src="Image/tiktok_logo_icon_186928.png"alt=""></a>
+                <a href="https://www.facebook.com/lesardentes"><img class="social-logo"src="Image/logo icons/facebook.png" alt="facebook"></a>
+                <a href="https://twitter.com/lesardentes"><img class="social-logo" src="Image/logo icons/Twitter.png" alt="twitter"></a>
+                <a href="https://www.instagram.com/lesardentes/"><img class="social-logo"src="Image/logo icons/instagram.png" alt="instagram"></a>
+                <a href="https://www.youtube.com/LesArdentesFestival"><img class="social-logo"src="Image/logo icons/youtube.png" alt="youtube"></a>
+                <a href="https://www.tiktok.com/@lesardentes"><img class="social-logo" src="Image/logo icons/tiktok.png"alt="tiktok"></a>
               </div>
         </div>
         <button alt="menu" class="menu-hamburger">MENU</button>
-    </nav>
 
     <div class="titre">
         BILLETTERIE EN LIGNE
@@ -47,8 +46,8 @@ include("connexion.php")
 
 <head>
     <body>
-        <form action="introbase.php" method='get'>
-            Réserver votre billets:
+        <form action="action.php" method='POST'>
+            Réserver votre pass:
         <div>
            <label for="prenom">Prénom :</label>
             <input type="text" id="prenom" name="user-prenom">
@@ -61,14 +60,8 @@ include("connexion.php")
             <label for="mail">e-mail&nbsp;:</label>
             <input type="email" id="mail" name="user-mail">
         </div>
-            <select name="day">
-                <option value="1">06 JUL</option>
-                <option value="2">07 JUL</option>
-                <option value="3">08 JUL</option>
-                <option value="4">09 JUL</option>
-            </select>
         <div class="button">
-            <button type="submit">Reservé</button>
+            <button type="submit" name="day" value="5">Reservé</button>
         </div>
     </div>
 
@@ -107,4 +100,5 @@ include("connexion.php")
       </footer>
     
 </body>
+<script src="Global.js"></script>
 </html>

@@ -81,7 +81,7 @@
     }
   
     .containernav{
-      margin-top: 150px;
+      margin-top: 100px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -101,7 +101,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      transition: transform 1s ease;
     }
+    
     
     .navbar .nav-links ul li{
       margin:  25px 0;
@@ -227,8 +229,6 @@
     height: 56px;
     padding-top:1px;
     border-bottom: 2px solid black;
-  
-   
   }
   
   .faq input[type="checkbox"] {
@@ -439,7 +439,6 @@ footer .footerFAQ {
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
-    margin: 150px;  
   }
 
  .tri{
@@ -495,6 +494,48 @@ footer .footerFAQ {
   transition: transform 1s ease;
 }
 
+.nav-links ul li:hover{
+  transform: scale(1.1);
+}
+
 .containeuresa .card:hover img {
   transform: scale(1.1);
+}
+
+/*billeterie2*/
+.containeuresa1{
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  max-width: 58.75rem;
+  margin: 0 auto;
+  padding: 80px 60px;
+  background-color: #ffffff;
+}
+
+
+.titre2{
+  display: flex;
+  padding: 50px 60px 20px;
+  justify-content: center ;
+  font-size: 30px;
+  max-width: 58.75rem;
+  margin: 0 auto;
+  background-color: white ;
+}
+
+.card1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  min-width: 200px;
+  background-color: #EB5C35;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.card1:hover{
+  background-color: grey;
 }

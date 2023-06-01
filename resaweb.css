@@ -44,10 +44,11 @@ section{
   -o-transition-timing-function:(cubic-bezier(.19,1,.22,1));
   transition-duration: 0.7s;
   transform: translate(-50%);
+  
 }
 
 .containernav{
-  margin-top: 150px;
+  margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,10 +70,15 @@ section{
   align-items: center;
 }
 
+.nav-links ul li:hover{
+  transform: scale(1.1);
+}
+
 .navbar .nav-links ul li{
   margin:  25px 0;
   font-size: 1.5em;
 }
+
 
 .logoheader{
   width: 20%;

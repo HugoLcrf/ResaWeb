@@ -1,3 +1,19 @@
+<?php
+include("connexion.php")
+?>
+
+<?php
+
+$username= $_POST['user-name'];
+$userprenom = $_POST['user-prenom'];
+$usermail= $_POST['user-mail'];
+$day= $_POST['day'];
+
+$requete = "INSERT INTO Reservation (prenom,nom,mail,ext_dates) VALUES ('$userprenom','$username','$usermail','$day')";
+$db->query($requete);
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -26,12 +42,12 @@
             </div>
             
             <div class="iconsnav">
-              <a href="https://www.facebook.com/lesardentes"><img class="social-logo"src="Image/logo icons/facebook.png" alt="facebook"></a>
-              <a href="https://twitter.com/lesardentes"><img class="social-logo" src="Image/logo icons/Twitter.png" alt="twitter"></a>
-              <a href="https://www.instagram.com/lesardentes/"><img class="social-logo"src="Image/logo icons/instagram.png" alt="instagram"></a>
-              <a href="https://www.youtube.com/LesArdentesFestival"><img class="social-logo"src="Image/logo icons/youtube.png" alt="youtube"></a>
-              <a href="https://www.tiktok.com/@lesardentes"><img class="social-logo" src="Image/logo icons/tiktok.png"alt="tiktok"></a>
-            </div>
+                <a href="https://www.facebook.com/lesardentes"><img class="social-logo"src="Image/icons8-facebook-entouré-150.png" alt=""></a>
+                <a href="https://twitter.com/lesardentes"><img class="social-logo" src="Image/Twitter-entouré.png" alt=""></a>
+                <a href="https://www.instagram.com/lesardentes/"><img class="social-logo"src="Image/instagram_black_logo_icon_147122.png" alt=""></a>
+                <a href="https://www.youtube.com/LesArdentesFestival"><img class="social-logo"src="Image/youtube_black_logo_icon_147044.png" alt=""></a>
+                <a href="https://www.tiktok.com/@lesardentes"><img class="social-logo" src="Image/tiktok_logo_icon_186928.png"alt=""></a>
+              </div>
         </div>
         <button alt="menu" class="menu-hamburger">MENU</button>
     </nav>
@@ -41,13 +57,12 @@
     </div>
 
     <div class="containeuresa">
-        <div class="card">
-            <a href="reservation1.html"><img src="Image/logo icons/pass-1.png" alt=""></a>
-        </div>
-        <div class="card">
-            <a href="reservation4.php"><img src="Image/logo icons/pass-4.png" alt=""></a>
-        </div>
-
+    <?php
+    if(isset($_POST['user-prenom']))
+    {
+      echo "bonjour" . $_POST['user-prenom'];
+    }
+        ?>
     </div>
 
       <footer class="footerticket">
