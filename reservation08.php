@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>08 JUL</title>
+    <link rel="icon" href="/Image/logo icons/favicon.ico">
     <link rel="stylesheet" href="Global.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Sora&display=swap"rel="stylesheet"/>
 </head>
@@ -19,7 +20,7 @@
                 <ul>
                   <li><a href="index.html">Accueil</a></li>
                     <li><a href="Line-up.php">Line-Up</a></li>
-                    <li><a href="#">TICKETS</a></li>
+                    <li><a href="Reservation.html">TICKETS</a></li>
                     <li><a href="FAQ.html">F.A.Q</a></li>
                     <li><a href="Actu.html">ACTU</a></li>
                 </ul>
@@ -47,22 +48,22 @@ include("connexion.php")
 
 <head>
     <body>
-        <form action="action.php" method='get'>
+        <form action="action.php" method='POST'>
             Réserver votre billets:
         <div>
            <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="user-prenom">
+            <input type="text" id="prenom" name="user-prenom" required>
         </div>
         <div>
            <label for="name">Nom :</label>
-            <input type="text" id="name" name="user-name">
+            <input type="text" id="name" name="user-name" required>
         </div> 
         <div>
             <label for="mail">e-mail&nbsp;:</label>
-            <input type="email" id="mail" name="user-mail">
+            <input type="email" id="mail" name="user-mail" required>
         </div>
         <div class="button">
-            <button type="submit" name="day" value="3">Reservé</button>
+            <button type="submit" name="day" value="3" required>Reservé</button>
         </div>
     </div>
 
@@ -75,7 +76,6 @@ include("connexion.php")
                 id="newsletter-email"
                 type="email"
                 placeholder="Entrez votre adresse e-mail"
-                required
               />
               <button type="submit">S'inscrire</button>
             </form>

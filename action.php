@@ -12,6 +12,11 @@ $day= $_POST['day'];
 $requete = "INSERT INTO Reservation (prenom,nom,mail,ext_dates) VALUES ('$userprenom','$username','$usermail','$day')";
 $db->query($requete);
 
+$subject = 'LESARDENTES';
+$message = "Votre reservations pour le festivales a bien été pris en comptes. Venez vous amusez !!";
+    $headers = "From: lesardentes@resaweb.lecerf.butmmi.o2switch.site	"; // la tu remplaces par ton adresse mail cpanel
+mail($usermail, $subject, $message, $headers);
+
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +26,7 @@ $db->query($requete);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BILLETTERIE</title>
+    <link rel="icon" href="/Image/logo icons/favicon.ico">
     <link rel="stylesheet" href="Global.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Sora&display=swap"rel="stylesheet"/>
 
@@ -57,12 +63,11 @@ $db->query($requete);
     </div>
 
     <div class="containeuresa">
+
     <?php
-    if(isset($_POST['user-prenom']))
-    {
-      echo "bonjour" . $_POST['user-prenom'];
-    }
+      echo "Bonjour " . $_POST['user-prenom'] . $_POST['user-name'] . " Votre reservations a été valider avec succes "."<br>". " Vous allez bientot recevoir un mail récapitulatif a " . $_POST['user-mail'] ;
         ?>
+
     </div>
 
       <footer class="footerticket">
@@ -74,7 +79,6 @@ $db->query($requete);
                 id="newsletter-email"
                 type="email"
                 placeholder="Entrez votre adresse e-mail"
-                required
               />
               <button type="submit">S'inscrire</button>
             </form>

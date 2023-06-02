@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>09 JUL</title>
     <link rel="stylesheet" href="Global.css">
+    <link rel="icon" href="/Image/logo icons/favicon.ico">
+
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Sora&display=swap"rel="stylesheet"/>
 </head>
 <body>
@@ -51,18 +53,18 @@ include("connexion.php")
             Réserver votre billets:
         <div>
            <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="user-prenom">
+            <input type="text" id="prenom" name="user-prenom"required>
         </div>
         <div>
            <label for="name">Nom :</label>
-            <input type="text" id="name" name="user-name">
+            <input type="text" id="name" name="user-name" required>
         </div> 
         <div>
             <label for="mail">e-mail&nbsp;:</label>
-            <input type="email" id="mail" name="user-mail">
+            <input type="email" id="mail" name="user-mail" required>
         </div>
         <div class="button">
-            <button type="submit" name="day" value="4">Reservé</button>
+            <button type="submit" name="day" value="4" required>Reservé</button>
         </div>
     </div>
 
@@ -75,7 +77,6 @@ include("connexion.php")
                 id="newsletter-email"
                 type="email"
                 placeholder="Entrez votre adresse e-mail"
-                required
               />
               <button type="submit">S'inscrire</button>
             </form>

@@ -41,7 +41,6 @@ section{
   margin-left: -100%;
   background-image: url(Image/background-orange.jpg);
   transition-delay: 0s;
-  -o-transition-timing-function:(cubic-bezier(.19,1,.22,1));
   transition-duration: 0.7s;
   transform: translate(-50%);
   
@@ -141,13 +140,13 @@ section{
 }
 
 .ticket div p:nth-child(1){
-  width: 13em;
-  height: 60px;
+  width: 450px;
+  height: 50px;
   background-color: black;
   font-weight: bold;
   font-size: 2vw;
   text-align: center;
-
+  border-radius: 40%;
 }
 
 .ticket div p:nth-child(2){
@@ -474,7 +473,7 @@ footer {
   
 }
 
-button {
+button, a.resa {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -487,7 +486,7 @@ button {
     color: #EB5C35
    }
    
-   button.billeterie, .lineUp, .reponse, .menu-hamburger{
+   button.billeterie, .lineUp, .reponse, .menu-hamburger, a.resa{
     font-weight: 600;
     color: #EB5C35;
     text-transform: uppercase;
@@ -503,7 +502,7 @@ button {
 
    }
    
-   button.billeterie /* ICI POUR L4OMBRE ORANGE */::before, .lineUp ::before, .reponse::before , .menu-hamburger::before{
+   button.billeterie /* ICI POUR L4OMBRE ORANGE */::before, .lineUp ::before, .reponse::before , .menu-hamburger::before, a.resa::before{
     position: absolute;
     content: '';
     width: 100%;
@@ -521,20 +520,20 @@ button {
     transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
    }
    
-   button.billeterie:hover, .lineUp:hover, .reponse:hover, .menu-hamburger:hover{
+   button.billeterie:hover, .lineUp:hover, .reponse:hover, .menu-hamburger:hover, a.resa:hover{
     background: black;
     -webkit-transform: translate(0, 0.25em);
     transform: translate(0, 0.25em);
    }
    
    
-   button.billeterie:active, .lineUp:active, .reponse:active, .menu-hamburger:active{
+   button.billeterie:active, .lineUp:active, .reponse:active, .menu-hamburger:active, a.resa:active{
     background: black;
     -webkit-transform: translate(0em, 0.75em);
     transform: translate(0em, 0.75em);
    }
    
-   button.billeterie:active::before, .lineUp:active::before, .reponse:active::before, .menu-hamburger:active::before{
+   button.billeterie:active::before, .lineUp:active::before, .reponse:active::before, .menu-hamburger:active::before, a.resa:active::beforex{
     -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 ;
     box-shadow: 0 0 0 2px #b18597, 0 0 ;
     -webkit-transform: translate3d(0, 0, -1em);
