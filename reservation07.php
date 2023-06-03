@@ -12,13 +12,13 @@
 <body>
 <body class="billetterie">
     <nav class="navbar navbar sticky-nav">
-        <a href="index.html"><img src="Image/logo_anim_04794562be.gif" alt="" class="logoheader"></a>
+        <a href="index.php"><img src="Image/logo_anim_04794562be.gif" alt="Accueil" class="logoheader"></a>
         <div class="nav-links ">
             <div class="containernav">
                 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                 <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_euaveaxu.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop  autoplay class="astronaute"></lottie-player>
                 <ul>
-                  <li><a href="index.html">Accueil</a></li>
+                  <li><a href="index.php">Accueil</a></li>
                     <li><a href="Line-up.php">Line-Up</a></li>
                     <li><a href="#">TICKETS</a></li>
                     <li><a href="FAQ.html">F.A.Q</a></li>
@@ -49,22 +49,24 @@ include("connexion.php")
 <head>
     <body>
         <form action="action.php" method='POST'>
-            Réserver votre billets:
+            Réserver votre billets pour le 07 Juillet 2023 (50 caracteres maximum par champs):
         <div>
-           <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="user-prenom" required>
+        <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="user-prenom"required alt="prenom">
         </div>
         <div>
            <label for="name">Nom :</label>
-            <input type="text" id="name" name="user-name" required>
+            <input type="text" id="name" name="user-name" required alt="nom">
         </div> 
         <div>
             <label for="mail">e-mail&nbsp;:</label>
-            <input type="email" id="mail" name="user-mail" required>
+            <input type="email" id="mail" name="user-mail" required alt="mail">
         </div>
         <div class="button">
-            <button type="submit" name="day" value="2" required>Reservé</button>
+            <button type="submit" name="day" value="2" required aria-describedby="reservé">Reservé</button>
         </div>
+        <a href="reservation1.html" class="tromper">Trompé de jour ? Revenez en arrière</a>
+
     </div>
 
       <footer class="footerticket">
@@ -102,4 +104,10 @@ include("connexion.php")
     
 </body>
 <script src="Global.js"></script>
+<script>
+        // Générer une alerte JavaScript lorsque le bouton "back" est utilisé
+        window.onbeforeunload = function() {
+            return 'Vous avez utilisé la fonctionnalité "back" de l\'historique du navigateur.';
+        };
+    </script>
 </html>

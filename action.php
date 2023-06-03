@@ -17,7 +17,9 @@ $message = "Votre reservations pour le festivales a bien été pris en comptes. 
     $headers = "From: lesardentes@resaweb.lecerf.butmmi.o2switch.site	"; // la tu remplaces par ton adresse mail cpanel
 mail($usermail, $subject, $message, $headers);
 
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -65,7 +67,7 @@ mail($usermail, $subject, $message, $headers);
     <div class="containeuresa">
 
     <?php
-      echo "Bonjour " . $_POST['user-prenom'] . $_POST['user-name'] . " Votre reservations a été valider avec succes "."<br>". " Vous allez bientot recevoir un mail récapitulatif a " . $_POST['user-mail'] ;
+      echo "Bonjour " . $_POST['user-prenom'] . $_POST['user-name'] . " Votre reservations a été valider avec succes "."<br>". " Vous allez bientot recevoir un mail récapitulatif a " . $_POST['user-mail'];
         ?>
 
     </div>

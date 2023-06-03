@@ -140,13 +140,10 @@ section{
 }
 
 .ticket div p:nth-child(1){
-  width: 450px;
   height: 50px;
-  background-color: black;
   font-weight: bold;
-  font-size: 2vw;
-  text-align: center;
-  border-radius: 40%;
+  font-size: 5em;
+  color: black;
 }
 
 .ticket div p:nth-child(2){
@@ -188,6 +185,7 @@ section{
     width: 100%;
     overflow: hidden;
     position: relative;
+    display: flex;
   }
   
   .carousel {
@@ -199,7 +197,7 @@ section{
   .carousel-item {
     flex: 0 0 calc(80% / 3);
     text-align: center;
-    margin: 5em 3em 0 2em;
+    margin: 5em -40px 0 2em;
   }
   
   .carousel-item:last-child {
@@ -207,8 +205,8 @@ section{
   }
   
   .carousel-item img {
-    width: 400px;
-    height: 300px;
+    width: 450px;
+    height: 350px;
     border-radius: 30%;
     border: 15px solid #BDBDBD;
   }
@@ -218,9 +216,8 @@ section{
     z-index: 100;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: 1rem;
     cursor: pointer;
-    background-image: url(Image/background-mauve.jpeg);
   }
   
   .prev {
@@ -473,7 +470,7 @@ footer {
   
 }
 
-button, a.resa {
+  button, a.resa, a.reponse{
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -486,7 +483,7 @@ button, a.resa {
     color: #EB5C35
    }
    
-   button.billeterie, .lineUp, .reponse, .menu-hamburger, a.resa{
+   button, a.lineUp, .reponse, .menu-hamburger, a.resa{
     font-weight: 600;
     color: #EB5C35;
     text-transform: uppercase;
@@ -502,7 +499,7 @@ button, a.resa {
 
    }
    
-   button.billeterie /* ICI POUR L4OMBRE ORANGE */::before, .lineUp ::before, .reponse::before , .menu-hamburger::before, a.resa::before{
+   button /* ICI POUR L4OMBRE ORANGE */::before, a.lineUp::before, .reponse::before , .menu-hamburger::before, a.resa::before{
     position: absolute;
     content: '';
     width: 100%;
@@ -520,20 +517,20 @@ button, a.resa {
     transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
    }
    
-   button.billeterie:hover, .lineUp:hover, .reponse:hover, .menu-hamburger:hover, a.resa:hover{
+  a.lineUp:hover, .reponse:hover, .menu-hamburger:hover, a.resa:hover{
     background: black;
     -webkit-transform: translate(0, 0.25em);
     transform: translate(0, 0.25em);
    }
    
    
-   button.billeterie:active, .lineUp:active, .reponse:active, .menu-hamburger:active, a.resa:active{
+   a.lineUp:active, .reponse:active, .menu-hamburger:active, a.resa:active{
     background: black;
     -webkit-transform: translate(0em, 0.75em);
     transform: translate(0em, 0.75em);
    }
    
-   button.billeterie:active::before, .lineUp:active::before, .reponse:active::before, .menu-hamburger:active::before, a.resa:active::beforex{
+   button:active::before, a.lineUp:active::before, .reponse:active::before, .menu-hamburger:active::before, a.resa:active::before{
     -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 ;
     box-shadow: 0 0 0 2px #b18597, 0 0 ;
     -webkit-transform: translate3d(0, 0, -1em);

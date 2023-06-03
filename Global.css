@@ -22,7 +22,6 @@
 
   .bodyfaq{
     background-image: url(Image/background-beige.jpg);
-    font-family: 'Sora', sans-serif;
   }
 
   .bodyactu{
@@ -46,14 +45,12 @@
     margin-top: -130px;  }
 
     /*navbar*/
-    
     .navbar .menu-hamburger{
       display:none;
       position: absolute;
       top: 45px;
       right: 50px;
       width: 100px;
-      outline: solid;
     }
 
     .navbar{
@@ -135,9 +132,6 @@
       /* Styles supplémentaires pour la barre de navigation fixée */
     }
 
-  /* nav img {
-    width: 20%;
-  } */
 
   /* TEXTE */
 .main{
@@ -183,7 +177,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh; /* or any other height you want */
+    height: 70vh; 
   }
   
   .FAQimg img {
@@ -324,7 +318,7 @@ footer .footerFAQ {
   .newsletter form button {
     padding: 8px 16px;
     background-color: orange;
-    color: white;
+    color: black;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -361,7 +355,7 @@ footer .footerFAQ {
 
      /*BOUTON*/
 
-     button, a.actu2{
+     button, a.actu2, a.tromper{
       position: relative;
       display: inline-block;
       cursor: pointer;
@@ -374,7 +368,7 @@ footer .footerFAQ {
       color: #EB5C35
      }
      
-     button.menu-hamburger, a.actu2{
+     button.menu-hamburger, a.actu2,a.tromper{
       font-weight: 600;
       color: #EB5C35;
       text-transform: uppercase;
@@ -390,7 +384,7 @@ footer .footerFAQ {
   
      }
      
-     button.menu-hamburger::before, a.actu2::before{
+     button.menu-hamburger::before, a.actu2::before,a.tromper::before{
       position: absolute;
       content: '';
       width: 100%;
@@ -408,20 +402,20 @@ footer .footerFAQ {
       transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
      }
      
-     button.menu-hamburger:hover, a.actu2:hover{
+     button.menu-hamburger:hover, a.actu2:hover,a.tromper:hover{
       background: black;
       -webkit-transform: translate(0, 0.25em);
       transform: translate(0, 0.25em);
      }
      
      
-     button.menu-hamburger:active, a.actu2:active{
+     button.menu-hamburger:active, a.actu2:active,a.tromper:active{
       background: black;
       -webkit-transform: translate(0em, 0.75em);
       transform: translate(0em, 0.75em);
      }
      
-     button.menu-hamburger:active::before, a.actu2:active::before{
+     button.menu-hamburger:active::before, a.actu2:active::before,a.tromper:active::before{
       -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 ;
       box-shadow: 0 0 0 2px #b18597, 0 0 ;
       -webkit-transform: translate3d(0, 0, -1em);
@@ -435,6 +429,15 @@ footer .footerFAQ {
 
        /* line-up */
 
+  .recherche{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 3em;
+    font-weight: bold;
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+    margin: 50px;
+  }
   .classement{
     display: flex;
     flex-wrap: wrap;
@@ -449,6 +452,20 @@ footer .footerFAQ {
   margin: 50px;
  }
 
+ .daynom{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  font-weight: bold;
+  border-top: black 3px solid;
+  border-bottom: black 3px solid;
+  margin-top: 20px;
+ }
+
+ .nom{
+  font-size: 2em;
+ }
+
 .rangement{
   display: flex;
   text-align: center;
@@ -461,6 +478,10 @@ footer .footerFAQ {
 }
 
 /*billeterie*/
+
+.tromper{
+  margin-top: 90px;
+}
 
 .footerticket{
   max-width: 58.75rem;
@@ -501,6 +522,11 @@ footer .footerFAQ {
 
 .containeuresa .card:hover img {
   transform: scale(1.1);
+}
+
+.card a:focus {
+  outline: none; /* Supprimer la bordure par défaut */
+  box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.5); /* Ajouter une ombre autour du lien */
 }
 
 /*billeterie2*/

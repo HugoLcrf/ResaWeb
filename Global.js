@@ -1,4 +1,5 @@
-var menuHamburger = document.querySelector(".menu-hamburger")
+// Menu Burger
+  var menuHamburger = document.querySelector(".menu-hamburger")
 var navLinks = document.querySelector(".nav-links")
 
 menuHamburger.addEventListener('click',()=>{
@@ -50,10 +51,17 @@ nextButton.addEventListener('click', () => {
 
 const sections = document.querySelectorAll("section");
 
-[...sections].forEach((section) => {
-  const checkbox = section.querySelector("input");
+//Traitement de chaine de caractere
 
-  checkbox.addEventListener("change", () => {
-    section.classList.toggle("enable-animation");
-  });
+var chaine = "user-name";
+
+function name (chaine){
+  return(chaine[0]).toUpperCase()
+}
+
+//Générer une alerte JavaScript en cas de l’utilisation de la fonctionnalité « back » de l’historique du navigateur.
+// Écouteur d'événement pour le bouton "back"
+window.addEventListener('popstate', function(event) {
+  // Afficher une alerte lorsque le bouton "back" est utilisé
+  alert('Vous avez utilisé la fonctionnalité "back" de l\'historique du navigateur.');
 });

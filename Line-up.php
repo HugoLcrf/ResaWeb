@@ -8,7 +8,7 @@ include("connexion.php")
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Line-up</title>
-  <link rel="icon" href="Image/logo icons/favicon.ico">
+  <link rel="icon" href="/Image/logo icons/favicon.ico">
 	<link rel="stylesheet" href="Global.css">
   <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Sora&display=swap" rel="stylesheet">
 </head>
@@ -18,13 +18,13 @@ include("connexion.php")
 </html>
 <body class="bodylineup">
     <nav class="navbar navbar sticky-nav">
-        <a href="index.html"><img src="Image/logo_anim_04794562be.gif" alt="" class="logoheader"></a>
+        <a href="index.php"><img src="Image/logo_anim_04794562be.gif" alt="Accueil" class="logoheader"></a>
         <div class="nav-links ">
             <div class="containernav">
                 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                 <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_euaveaxu.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop  autoplay class="astronaute"></lottie-player>
                 <ul>
-                  <li><a href="index.html">Accueil</a></li>
+                  <li><a href="index.php">Accueil</a></li>
                     <li><a href="Line-up.php">Line-Up</a></li>
                     <li><a href="Reservation.html">TICKETS</a></li>
                     <li><a href="FAQ.html">F.A.Q</a></li>
@@ -52,9 +52,11 @@ include("connexion.php")
         </div>
     </div>
 
+    <div class="recherche">
+      <a href="Line-up.php?tri=artistes_nom">A-Z</a>
+      <br><a href="Line-up.php?date=1">DATES</a>
+    </div> 
     <div class="classement">
-		    <a href="Line-up.php?tri=artistes_nom">A-Z</a>
-		<br><a href="Line-up.php?date=1">DATES</a> 
         <?php
 $artistes = range(1, 36); // Génère un tableau avec les nombres de 1 à 36
 $artistesString = implode(",", $artistes);
@@ -74,8 +76,12 @@ foreach ($results as $row){
 ?>
 
 	<div class='tri'>
-        <?= $row["artistes_nom"] ?><img src="<?= $row["artistes_photo"] ?>" alt="Image" height="300px" width="400px">
-        <?= $row["day_dates"] ?>
+    <div class='daynom'>
+    <div class='nom'><?= $row["artistes_nom"] ?></div>
+    <div><?= $row["day_dates"] ?></div>
+    </div>
+    <img src="<?= $row["artistes_photo"] ?>" alt="Image" height="300px" width="400px">
+
     </div>
 
 <?php
