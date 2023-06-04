@@ -34,6 +34,7 @@
   }
 
   .billetterie{
+    overflow:hidden;  
     background-image: url(Image/background-orange.jpg);
   }
 
@@ -355,7 +356,7 @@ footer .footerFAQ {
 
      /*BOUTON*/
 
-     button, a.actu2, a.tromper{
+     button.day, a.actu2{
       position: relative;
       display: inline-block;
       cursor: pointer;
@@ -368,7 +369,7 @@ footer .footerFAQ {
       color: #EB5C35
      }
      
-     button.menu-hamburger, a.actu2,a.tromper{
+     button.menu-hamburger, a.actu2{
       font-weight: 600;
       color: #EB5C35;
       text-transform: uppercase;
@@ -565,4 +566,8 @@ footer .footerFAQ {
 
 .card1:hover{
   background-color: grey;
+}
+
+.prix{
+  font-size: 1em;
 }

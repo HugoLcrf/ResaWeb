@@ -55,17 +55,39 @@ include("connexion.php")
     <div class="recherche">
       <a href="Line-up.php?tri=artistes_nom">A-Z</a>
       <br><a href="Line-up.php?date=1">DATES</a>
+      <a href="Line-up.php?date1">06 JUL</a>
+      <a href="Line-up.php?date2">07 JUL</a>
+      <a href="Line-up.php?date3">08 JUL</a>
+      <a href="Line-up.php?date4">09 JUL</a>
     </div> 
+
     <div class="classement">
         <?php
-$artistes = range(1, 36); // Génère un tableau avec les nombres de 1 à 36
-$artistesString = implode(",", $artistes);
-$request = "SELECT * FROM artistes, dates WHERE id_artistes IN ({$artistesString}) AND id_dates=ext_dates";
 
-//if (isset($_GET["date"])){
- // $request = "SELECT * FROM artistes, dates WHERE ext_dates = " . $_GET["date"];
-//}
+$request = "SELECT * FROM artistes, dates WHERE id_artistes AND id_dates=ext_dates";
 
+//tri par jour precis
+//06 JUL
+if (isset($_GET["date1"])){
+  $request = "SELECT * FROM artistes, dates WHERE ext_dates = 1 " . $_GET["date1"]. " LIMIT 9";
+}
+//07 JUL
+
+if (isset($_GET["date2"])){
+  $request = "SELECT * FROM artistes, dates WHERE ext_dates = 2 " . $_GET["date2"]. " LIMIT 9,9";
+}
+//08 JUL
+
+if (isset($_GET["date3"])){
+  $request = "SELECT * FROM artistes, dates WHERE ext_dates = 3 " . $_GET["date3"]. " LIMIT 18,9";
+}
+
+//09 JUL
+if (isset($_GET["date4"])){
+  $request = "SELECT * FROM artistes, dates WHERE ext_dates AND id_dates = 4 " . $_GET["date4"]. " LIMIT 27,9";
+}
+
+//Tri par ordre alphabetique
 if (isset($_GET["tri"])){
 	$request = $request . " ORDER BY {$_GET["tri"]}";
 }

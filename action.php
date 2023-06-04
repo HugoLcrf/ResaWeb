@@ -1,5 +1,6 @@
 <?php
 include("connexion.php")
+
 ?>
 
 <?php
@@ -35,13 +36,13 @@ mail($usermail, $subject, $message, $headers);
 </head>
 <body class="billetterie">
     <nav class="navbar navbar sticky-nav">
-        <a href="index.html"><img src="Image/logo_anim_04794562be.gif" alt="" class="logoheader"></a>
+        <a href="index.php"><img src="Image/logo_anim_04794562be.gif" alt="" class="logoheader"></a>
         <div class="nav-links ">
             <div class="containernav">
                 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                 <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_euaveaxu.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop  autoplay class="astronaute"></lottie-player>
                 <ul>
-                  <li><a href="index.html">Accueil</a></li>
+                  <li><a href="index.php">Accueil</a></li>
                     <li><a href="Line-up.php">Line-Up</a></li>
                     <li><a href="Reservation.html">TICKETS</a></li>
                     <li><a href="FAQ.html">F.A.Q</a></li>
@@ -65,9 +66,8 @@ mail($usermail, $subject, $message, $headers);
     </div>
 
     <div class="containeuresa">
-
     <?php
-      echo "Bonjour " . $_POST['user-prenom'] . $_POST['user-name'] . " Votre reservations a été valider avec succes "."<br>". " Vous allez bientot recevoir un mail récapitulatif a " . $_POST['user-mail'];
+      echo "Bonjour " . $_POST['user-prenom'] .$_POST['user-name'] . " <br> Votre reservations a été valider avec succès."."<br>". " Vous allez bientot recevoir un mail récapitulatif a " . $_POST['user-mail'];
         ?>
 
     </div>

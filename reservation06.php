@@ -48,8 +48,8 @@ include("connexion.php")
 
 <head>
     <body>
-        <form action="action.php" method='POST'>
-            Réserver votre billets pour le 06 Juillet 2023(50 caracteres maximum par champs):
+      <form action="action.php" method='POST' onsubmit="convertToUpper()">
+            Réserver votre billets pour le 06 Juillet 2023 (50 caracteres maximum par champs):
         <div>
         <label for="prenom">Prénom :</label>
             <input type="text" id="prenom" name="user-prenom"required alt="prenom">
@@ -63,10 +63,13 @@ include("connexion.php")
             <input type="email" id="mail" name="user-mail" required alt="mail">
         </div>
         <div class="button">
-            <button type="submit" name="day" value="1" aria-describedby="reservé">Reservé</button>
+            <button type="submit" name="day" value="1" aria-describedby="reservé" class="day">Reservé</button>
+        </div>
+        <div class="prix">
+            <p>€ 95.00</p>
         </div>
         <a href="reservation1.html" class="tromper">Trompé de jour ? Revenez en arrière</a>
-
+      </form>
     </div>
 
       <footer class="footerticket">
@@ -93,10 +96,8 @@ include("connexion.php")
   
         <section class="closure">
           <div class="containerclosure">
-            <div class="suplement">
-              <a href="Mention.html">Mentions légales</a>
-            </div>
-            <div class="suplement"><a href="CGU.html">CGU</a></div>
+          <div class="suplement"> <a href="Mention.html" alt="Mentions légales">Mentions légales</a></div>
+        <div class="suplement"> <a href="CGU.html" alt="Condition generales d'utilisation">CGU</a></div>
             <div class="suplement">Les Ardentes 2023</div>
           </div>
         </section>
@@ -105,6 +106,13 @@ include("connexion.php")
 </body>
 <script src="Global.js"></script>
 <script>
+  //Traitement de chaine de caractere
+
+  function convertToUpper() {
+    var nameInput = document.getElementById("name");
+    nameInput.value = nameInput.value.toUpperCase();
+}
+    
         // Générer une alerte JavaScript lorsque le bouton "back" est utilisé
         window.onbeforeunload = function() {
             return 'Vous avez utilisé la fonctionnalité "back" de l\'historique du navigateur.';

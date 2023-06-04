@@ -19,11 +19,11 @@
                 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                 <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_euaveaxu.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop  autoplay class="astronaute"></lottie-player>
                 <ul>
-                  <li><a href="index.php">Accueil</a></li>
-                    <li><a href="Line-up.php">Line-Up</a></li>
-                    <li><a href="#">TICKETS</a></li>
-                    <li><a href="FAQ.html">F.A.Q</a></li>
-                    <li><a href="Actu.html">ACTU</a></li>
+                <li><a href="index.php" alt="Accueil">Accueil</a></li>
+                <li><a href="Line-up.php" alt="Line-up">Line-Up</a></li>
+                <li><a href="Reservation.html" alt="Billeteries">TICKETS</a></li>
+                <li><a href="FAQ.html" alt="FAQ">F.A.Q</a></li>
+                <li><a href="Actu.html" alt="Actualité">ACTU</a></li>
                 </ul>
             </div>
             
@@ -49,7 +49,7 @@ include("connexion.php")
 
 <head>
     <body>
-        <form action="action.php" method='POST'>
+        <form action="action.php" method='POST' onsubmit="convertToUpper()">
             Réserver votre billets pour le 09 Juillet 2023 (50 caracteres maximum par champs):
         <div>
            <label for="prenom">Prénom :</label>
@@ -65,6 +65,9 @@ include("connexion.php")
         </div>
         <div class="button">
             <button type="submit" name="day" value="4" required aria-describedby="Reservé">Reservé</button>
+        </div>
+        <div class="prix">
+            <p>€ 95.00</p>
         </div>
         <a href="reservation1.html" class="tromper">Trompé de jour ? Revenez en arrière</a>
 
@@ -93,19 +96,23 @@ include("connexion.php")
         </div>
   
         <section class="closure">
-          <div class="containerclosure">
-            <div class="suplement">
-              <a href="Mention.html">Mentions légales</a>
-            </div>
-            <div class="suplement"><a href="CGU.html">CGU</a></div>
+            <div class="containerclosure">
+            <div class="suplement"> <a href="Mention.html" alt="Mentions légales">Mentions légales</a></div>
+            <div class="suplement"> <a href="CGU.html" alt="Condition generales d'utilisation">CGU</a></div>
             <div class="suplement">Les Ardentes 2023</div>
-          </div>
+            </div>
         </section>
       </footer>
     
 </body>
 <script src="Global.js"></script>
 <script>
+  //Traitement de chaine de caractere
+
+  function convertToUpper() {
+    var nameInput = document.getElementById("name");
+    nameInput.value = nameInput.value.toUpperCase();
+}
         // Générer une alerte JavaScript lorsque le bouton "back" est utilisé
         window.onbeforeunload = function() {
             return 'Vous avez utilisé la fonctionnalité "back" de l\'historique du navigateur.';
